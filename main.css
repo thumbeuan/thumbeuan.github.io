@@ -1,0 +1,490 @@
+:root {
+	--c-white: #DFE3E9;
+	--c-gray: #272727;
+	--c-blue: #4ce253;
+	--c-dgray: #0F0F0F;
+	--m-shad: -3px 3px var(--c-dgray);
+	--p-shad: -2px 2px var(--c-dgray);
+}
+
+@font-face {
+    font-family: 'Segoe1';
+    src: url('style/fonts/SegoeUI-Light.woff2') format('woff2'),
+        url('style/fonts/SegoeUI-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoe2';
+    src: url('style/fonts/SegoeUI-Semilight.woff2') format('woff2'),
+        url('style/fonts/SegoeUI-Semilight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoe3';
+    src: url('style/fonts/SegoeUI-Bold.woff2') format('woff2'),
+        url('style/fonts/SegoeUI-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Minecraft Ten';
+    src: url('style/fonts/MinecraftFiftySolid.woff2') format('woff2'),
+        url('style/fonts/MinecraftFiftySolid.woff') format('woff');
+    font-weight: normal;font-style: normal;font-display: swap;
+}
+
+::selection  {background-color: var(--c-gray);color: var(--c-white);}
+	
+body, html {
+    width: 100%;height: 100%;margin: 0;padding: 0;
+    color: var(--c-gray);
+    font-family: Segoe2;background-color: var(--c-white);
+}
+.blue {color: var(--c-blue);}
+a {
+	color: var(--c-blue);text-decoration: underline;
+}
+input {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+/* Dark theme Changes */
+
+.darktitles .featured-line, .darktitles .featured-title
+{color: #DFE3E9 !important;text-shadow: -3px 3px #0F0F0F;}
+
+.darktitles .section-title, .darktitles .em-title, .darktitles .joindc {color: #DFE3E9 !important;text-shadow: -3px 3px #0F0F0F;}
+.darktitles .scrolled-menu, .darktitles footer {background-color: #010101 !important;}
+.darktitles .links-right a, .darktitles footer, .darktitles footer a, .darktitles .bookmark-p font
+{color: #DFE3E9 !important;}
+.darktitles .links-right a:hover {color: #4ce253 !important;}
+.darktitles .scrolled-menu .logo-text {color: #4ce253 !important;}
+.darktitles .logo-text .greentext {color: #DFE3E9 !important;}
+.darktitles .auth-bg, .darktitles .joindc {background-color: #0f0f0f !important;}
+.darktitles .auth-box input {color: #DFE3E9 !important;}
+.darktitles .auth-box label {color: #DFE3E9 !important;}
+.darktitles input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 50px var(--c-gray) inset;
+    -webkit-text-fill-color: #DFE3E9;
+}
+.darktitles .em-title {color: white !important;text-shadow: none !important;}
+.dc .em-title {color: white !important;}
+
+/* Dark theme Changes */
+
+
+.load {
+	position: fixed;top:0;left:0;width:100%;height:100%;
+	z-index: 999;color: var(--c-white);
+	background-color: var(--c-blue);text-align: center;
+	background: linear-gradient(to bottom right, #81C3FF, #7D85FF);
+}
+.load img {height: 8vh;margin-top: 46vh;}
+
+
+menu {
+	position:fixed;top: 5%;left:5%;width: 90%;z-index: 996;
+	border: none;outline: none;margin: 0;padding: 0;transition: all 0.2s ease-in-out;
+}
+.logo-left, .links-right {
+	display: inline-block;position:relative;vertical-align: middle;
+}
+.logo-left img {height: 5vh;display: inline-block;vertical-align: middle;}
+.logo-left .logo-text {display: inline-block;vertical-align: middle;margin-left: 1vh;color: var(--c-dgray);text-decoration: none;}
+.logo-left {
+	width: 30%;text-align: left;font-family: 'Minecraft Ten';
+	color: var(--c-dgray);font-size: 4vh;transition: all 0.2s ease-in-out;
+}
+.links-right {
+	text-align: right;width: 70%;
+}
+.links-right a {
+	font-size: 4vh;font-family: 'Minecraft Ten';color: var(--c-dgray);line-height: 4vh;margin-top: 0.75vh;
+	padding: 2vh;text-decoration: none;transition: all 0.2s ease-in-out;display: inline-block;vertical-align: middle;
+}
+.theme-switch {height: 4vh;padding: 2vh 0;display: inline-block;vertical-align: middle;cursor: pointer;}
+#first-link {padding-right: 0 !important;}
+
+.scrolled-menu {
+	top: 0;left:0;padding: 0.5% 5%;background-color: var(--c-dgray);
+}
+.scrolled-menu .logo-text {color: var(--c-white) !important;font-size: 3vh;}
+.scrolled-menu .logo-left {color: var(--c-white);font-size: 3vh;}
+.scrolled-menu .logo-left img {height: 4vh;}
+.scrolled-menu .links-right a {color: var(--c-white);font-size: 3vh;}
+
+.links-right a:hover {color: var(--c-blue);}
+.bookmark-p {
+	position:fixed;bottom:-15vh;background-color: var(--c-blue);
+	box-shadow: 0 -3px 3px 0 rgba(0,0,0,0.3);padding: 1.5vh 2vh;
+	text-align: center;font-size: 2vh;left: 0;width: 100%;z-index: 997;
+}
+.loaded-bookmark {bottom: 0;transition: bottom 0.3s ease-in-out;}
+.bookmark-p font, .bookmark-p a, .bookmark-p img {
+	display: inline-block;position:relative;vertical-align: middle;color: var(--c-white);
+}
+.bookmark-p img {height: 3vh;}
+.bookmark-p a {
+	background-color: var(--c-dgray);padding: 0.5vh 1vh;color: var(--c-white);text-decoration: none;
+	margin: 0 1vh;
+}
+.scrolled-menu .loaded-bookmark {top: 15vh;left: 5%;}
+.close-book {cursor: pointer;}
+
+
+header {
+	position:relative;width:100%;overflow: auto;
+}
+
+
+section {
+	position:relative;width:90%;padding: 5%;
+}
+.section-title {
+	font-family: 'Minecraft Ten';color: var(--c-blue);
+	text-shadow: var(--m-shad);font-size: 6vh;
+}
+.featured-packs {
+	width:100%;display:block;height: 70vh;margin-top: 15vh;position:relative;
+}
+.featured-packs::before {
+	position:absolute;top:10%;height:80%;width:100%;left:0;content: "";
+	background-color: var(--c-blue);z-index: 1;
+}
+
+.featured-load {
+	position:relative;width: 70%;margin-left: 15%;height: 100%;background-color: black;
+	z-index: 3;
+}
+.featured-in-load {
+	position:absolute;top:0;left:0;width:100%;height:100%;z-index: 5;
+	background-size: cover;background-position: center;background-repeat: no-repeat;
+	transition: background-size 0.3s ease-in-out;cursor: pointer;
+}
+.featured-text {
+	position:absolute;bottom:10%;left: -5vh;z-index: 7;
+	font-family: 'Minecraft Ten';color: var(--c-white);
+	text-shadow: var(--m-shad);
+}
+.featured-line {font-size: 3.5vh;display:block;position:relative;margin-left: 1px;}
+.featured-title {font-size: 6vh;display:block;position:relative;}
+.arrow-left, .arrow-right {
+	position:absolute;display:inline-block;z-index: 20;
+	height: 8vh;top: calc(50% - 4vh);cursor: pointer;
+}
+.arrow-left img, .arrow-right img {height: 8vh;}
+.arrow-left {left: 5%;-webkit-transform: scaleX(-1);transform: scaleX(-1);}
+.arrow-right {right: 5%;}
+
+.inactive {opacity: 0.5;cursor: not-allowed !important;}
+
+.featured-wrap {position:relative;}
+.featured-in-load:hover {background-size: 105% auto;}
+
+
+@keyframes featuredswitch {
+	0% {left: 15%;right: auto;width: 0;}
+	50% {left: 15%;right: auto;width: 70%;}
+	60% {left: auto;right: 15%;width: 70%;}
+	100% {left: auto;right: 15%;width: 0%;}
+}
+
+.featured-over-anim {
+	position:absolute;top:0;left:15%;width:0;height:100%;background-color: var(--c-blue);
+	z-index: 995;
+}
+.featured-over-animated {animation: featuredswitch 1s ease-in-out;}
+
+
+.email-s {
+	background-color: var(--c-white);text-align: center;
+	color: var(--c-blue);
+}
+.em-title {
+	font-size: 6vh;font-family: 'Minecraft Ten';text-shadow: var(--m-shad);
+	color: var(--c-blue);
+}
+.em-desc {
+	position:relative;display:block;font-size: 2.5vh;font-weight: bold;font-family: Segoe3;
+	margin: 1vh 0 3vh 0;
+}
+
+.email-s input {
+	display:block;position:relative;outline: none;border: none;margin-left: 20%;
+	width: 60%;padding: 2vh;background-color: var(--c-blue);
+	color: var(--c-white);font-size: 3vh;font-family: Segoe3;
+}
+.email-s input[type="submit"] {
+	color: #DFE3E9 !important;text-shadow: none;margin-top: 1vh;
+	padding: 2vh 2vh 1.75vh 2vh;display: none;
+}
+.email-submit-open {display:block !important;}
+.email-s ::placeholder {color: var(--c-dgray) !important;}
+
+.panel-login {cursor: pointer;}
+.auth-bg {
+	position:fixed;top:0;left:0;width:0%;height:0%;background-color: var(--c-dgray);
+	opacity: 0.5;z-index: 997;transition: opacity 0.3s ease;opacity: 0;
+}
+.show-auth-bg {width:100%;height:100%;opacity: 0.5;}
+.auth-box {
+	position:fixed;top: -100%;left: 32.5%;width: 37.5%;
+	text-align: center;background-color: var(--c-blue);
+	z-index: 998;transition: top 0.8s ease-in-out;
+}
+.show-auth-top {top: 10%;}
+.auth-title {
+	position:relative;display:block;font-size: 2.5vw;font-family: 'Minecraft Ten';
+	text-shadow: -3px 3px #0f0f0f;color: var(--c-blue);margin-bottom: 2vh;
+}
+.auth-switch {
+	font-size: 1vw;color: var(--c-dgray);cursor: pointer;margin-bottom: 1.5vw;
+	position:relative;display:inline-block;
+}
+
+.auth-box form {display: none;}
+.input-div {
+	position:relative;width:100%;margin-bottom: 1vw;
+}
+input, select, textarea {
+	position:relative;display:block;width:100%;outline: none;border: none;line-height: 1vw !important;
+	background-color: var(--c-gray);padding: 0.5vw;color: var(--c-white);font-size:1vw !important;
+}
+label {
+	color: var(--c-white);font-size: 1vw;font-family: Segoe3;
+	position:absolute;top: 0.25vw;left: 0.5vw;line-height: 1.5vw;
+    transition: all 0.2s ease-in-out;
+}
+
+label:hover, input:active ~ label, input:focus ~ label, input:hover ~ label, input:not(:placeholder-shown) ~ label {
+    top: -1.15vw !important;left: 0;font-size: .75vw !important;color: var(--c-dgray);
+}
+input:-webkit-autofill ~ label {top: -1.15vw;left: 0;font-size: .75vw;color: var(--c-dgray);}
+
+.inputused:valid {border-bottom: solid 1px #5bcf6e;}
+.inputused:not(valid) {border-bottom: solid 1px #c74646;}
+input[type="submit"] {
+	background-color: var(--c-blue);cursor: pointer;font-family: 'Minecraft Ten';
+	text-shadow: -3px 3px #0f0f0f;color: var(--c-white);font-size: 1vw;
+}
+.auth-box input::selection {background-color: var(--c-blue);}
+
+.error {padding: .5vw;font-size: 1vw;color: #c74646;position:relative;display:block;}
+
+.left-auth, .right-auth {
+	display: inline-block;vertical-align: top;
+}
+.left-auth {width: 15%;padding: 5% 0;z-index: 100;}
+.right-auth {width: 80%;padding: 2.5%;background-color: var(--c-white);z-index: 90;}
+
+.left-auth-action {display:block;position:relative;margin-bottom: 4vh;cursor: pointer;}
+.left-auth-action img {width: 50%;display:block;margin: 0 0 0 25%;transition: all 0.2s ease-in-out;}
+.left-auth-action font {
+	position:absolute;top: 1.25vh;left: 80%;z-index: 200;white-space: nowrap;opacity: 0;
+	display:block;padding: 0.25vh 1vh;color: var(--c-white);background-color: var(--c-dgray);
+	transition: opacity 0.2s ease-in-out, left 0.2s ease-in-out;pointer-events: none;
+}
+.left-auth-action font::before {
+	width: 0;height: 0;content: "";top:calc(50% - 8px);left: -8px;
+	border-style: solid;border-width: 8px 8px 8px 0;position:absolute;
+	border-color: transparent var(--c-dgray) transparent transparent;
+}
+
+.left-auth-action:hover img {transform: scale(1.05);}
+.left-auth-action:hover font {opacity: 1;left: 90%;}
+
+
+
+input:-webkit-autofill {
+    background-color: transparent !important;
+    background: transparent !important;
+    -webkit-box-shadow: 0 0 0 50px var(--c-gray) inset;
+    -webkit-text-fill-color: var(--c-white);
+    font-size: 1vw !important;line-height: 1.5vw;font-family: Segoe3;
+}
+
+
+.dc {text-align: center;background: linear-gradient(to bottom right, #81C3FF, #7D85FF);}
+.dc .em-title {display:block;text-align: center;color: var(--c-white);}
+.joindc {
+	display: inline-block;position:relative;padding: 0.65vw 1vw 0.5vw 1vw;font-size:1.25vw;
+	font-family: 'Minecraft Ten';text-shadow: -3px 3px #0f0f0f;cursor: pointer;
+	background-color: var(--c-dgray);color: var(--c-white);text-decoration: none;
+	margin-top: 2vw;transition: all 0.2s ease-in-out;
+}
+.joindc:hover {
+	transform: scale(1.05);
+}
+
+
+footer {
+	position:relative;display:block;width:90%;padding: 2% 5%;
+	background-color: var(--c-dgray);text-align: center;
+	color: var(--c-white);
+}
+footer a {
+	color: var(--c-white);position:relative;margin: 0 0.5vw;
+	text-decoration: none;display: inline-block;
+	font-size: 0.75vw;transition: color 0.2s ease-in-out;
+}
+footer a img {height: 1.25vw;transition: transform 0.2s ease-in-out;}
+footer a img:hover {transform: scale(1.1);}
+footer a:hover {color: var(--c-blue) !important;}
+
+.regular-footer-links, .social-footer-links {
+	position:relative;display: inline-block;vertical-align: top;
+	width: 40%;margin-left: 20%;text-align: left;
+}
+.social-footer-links {width: 20%;margin-left: 0 !important;margin-right: 20%;text-align: right !important;}
+.social-footer-head {
+	position:relative;display:block;margin-bottom: 1vw;
+	font-size: 0.75vw;
+}
+.copyright, .phone-copyright {
+	position:relative;display:block;margin-top: 1vw;font-size: 0.75vw;
+}
+#first-footer-link {margin-left: 0 !important;padding-left: 0 !important;}
+
+
+.search-bg {
+	position:fixed;top:0;left:0;width:100%;height:100%;background-color: black;
+	opacity: 0.5;display: none;z-index: 997;
+}
+.search-po {
+	position:fixed;top:-100%;left:0%;width: 100%;height: 100%;
+	background-color: var(--c-white);z-index: 998;
+	transition: top 0.5s ease-in-out;overflow: hidden;
+}
+.search-main {width: 100%;}
+.search-terms {display:block;margin-top: 1vh;}
+.in-term {position:relative;display: inline-block;vertical-align: middle;width: 15%;margin-right: 1vh;}
+.in-term input, .in-term select, .crtr {
+	width: 100% !important;margin: 0 !important;
+	background-color: var(--c-white);color: var(--c-dgray);
+}
+.in-term ::placeholder {color: var(--c-dgray);}
+.search-terms select {
+	outline: none;opacity: 1;background-color: var(--c-white);color: var(--c-dgray);
+}
+.selectsearch {width: 15%;}
+
+.search-field {
+	position:relative;width:80%;
+	background-color: var(--c-blue);padding: 2.5% 10%;
+}
+.search-main input {
+	background-color: var(--c-dgray);display: inline-block;width: 80%;
+	padding: 0.5vw !important;
+}
+.search-main input[type="submit"] {
+	background-color: var(--c-white);width: 18% !important;margin-left: 1%;
+	padding: 0.55vw !important;color: var(--c-dgray);text-shadow: none;
+}
+.search-results {
+	position:relative;width: 90%;margin-left: 5%;
+	height: 70%;
+}
+iframe {
+	width:100%;height:100%;position: absolute;top:0;left:0;
+	outline: none;border: none;
+}
+
+.close-search {
+	position:absolute;top: 0.5vh;right: 0.5vh;width: 2vw;
+	cursor:pointer;transition: all 0.2s ease-in-out;z-index: 300;
+}
+.close-search:hover {transform: scale(1.1);}
+.darktitles .search-field input, .darktitles .in-term select {background-color: #DFE3E9 !important;color: #272727 !important;}
+.darktitles .search-field input[type="submit"] {background-color: #272727 !important;color: #DFE3E9 !important;}
+.darktitles .in-term ::placeholder {color: #272727 !important;}
+.phone-switch, .phone-copyright {display:none !important;position:relative;}
+
+
+
+.more {}
+
+
+
+@media (max-width: 980px) {
+	.auth-box, .auth-bg, .links-right, .copyright, .bookmark-p
+	{display: none !important;}
+	.phone-switch {display: inline-block !important;vertical-align: middle;margin-left: 2vh;}
+	.logo-left {text-align: center !important;width:100%;display:block;}
+	.section-title {font-size: 4vh;}
+	
+	.featured-packs {height: 25vh;margin-top: 15vh;}
+	.featured-line {font-size: 1.75vh;}
+	.featured-title {font-size: 4vh;}
+	.arrow-left, .arrow-right {display: none;}
+
+	.featured-load {width: 95%;margin-left: 2.5%;}
+	.featured-text {left: 2vh;bottom: -2vh;}
+	@keyframes featuredswitch {
+		0% {left: 2.5%;right: auto;width: 0;}
+		50% {left: 2.5%;right: auto;width: 95%;}
+		60% {left: auto;right: 2.5%;width: 95%;}
+		100% {left: auto;right: 2.5%;width: 0%;}
+	}
+	.featured-over-anim {left:2.5%;}
+
+	section, footer {padding: 5%;}
+	.em-title, .section-title {font-size: 3vh;text-shadow: var(--p-shad) !important;}
+	.section-title {font-size: 3.5vh;}
+	.joindc {padding: 1vh 2vh 0.95vh 2vh;font-size:2.5vh;margin-top: 3vh;}
+	.em-desc {font-size: 2vh;}
+	.email-s input {padding: 0.75vh 1vh;font-size:2vh !important;width: 80%;margin-left: 10%;}
+	.email-s .em-title, .dc .em-title {width: 80%;margin-left: 10%;display:block;}
+	
+	footer a {margin: 0 0.5vh;font-size: 1.25vh;vertical-align: top;}
+	footer a img {height: 3vh;margin-top: .25vh;}
+	#third-footer-link {margin-left: 0 !important;padding-left: 0 !important;}
+	.regular-footer-links, .social-footer-links {width: 90%;margin-left: 0%;vertical-align: top;text-align: left !important;}
+	.social-footer-links {
+		width: 90%;margin-right: 0% !important;text-align: left !important;
+		margin-top: 2vh;
+	}
+	footer .first-link {margin-left: 0 !important;}
+	.social-footer-head {margin-bottom: 1vh;font-size: 1.5vh;}
+	.phone-copyright {
+		display:block !important;margin-top: 2vh;font-size: 1.25vh;
+		text-align: left;width: 90%;margin-left: 5%;
+	}
+    .apply-header {margin-top: 30% !important;}
+
+	.search-results {height: 80%;}
+	.search-main input, .search-terms select, .crtr {
+		padding: 2vw !important;line-height: 3.5vw !important;
+		font-size: 3.5vw !important;font-family: Segoe2 !important;
+	}
+	.search-main input[type="submit"] {
+		padding: 2.5vw 2vw !important;font-size: 3.5vw !important;
+		font-family: Segoe2 !important;line-height: 3.5vw !important;
+	}
+
+	.in-term, .selectsearch {width: calc(33.3% - 1vh) !important;}
+	.ressearch {margin-right: 0 !important;width: 33.3% !important;}
+	input[type="select"] {font-family: Segoe2 !important;font-size: 3.5vw !important;}
+	::placeholder {font-size: 3.5vw !important;line-height: 3.5vw !important;}
+	.close-search {width: 8vw;}
+}
+
+
+.hippo-l {
+	position:relative;display:block;width: 50%;margin: 2.5% 0 0 25%;
+	text-decoration: none;
+}
+.hippo-l img {width:100%;display:block;margin:0;}
+.over-hippo {
+	position:absolute;bottom:10px;left:10px;display:block;font-size: 3vh;color: white;
+	text-shadow: 0 0 3px black;font-family: Segoe3;
+}
+@media (max-width: 980px) {
+	.hippo-l {width: 90%;margin: 2.5% 0 0 5%;}
+	.over-hippo {font-size: 2.5vh;bottom: 4px;left: 4px;}
+}
