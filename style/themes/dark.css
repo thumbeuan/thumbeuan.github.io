@@ -1,0 +1,11 @@
+:root {
+    --c-white: #DFE3E9;
+    --c-gray: #1e1e1e;
+    --c-blue: #4C83E2;
+    --c-dgray: #0F0F0F;
+    --m-shad: -3px 3px var(--c-dgray);
+    --p-shad: -2px 2px var(--c-dgray);
+    --c-bg: #0F0F0F;
+    --c-switch: #DFE3E9;
+    --c-switch2: #0F0F0F;
+}
